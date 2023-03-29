@@ -1,0 +1,30 @@
+# 项目相关配置
+quinlan:
+  # 验证码类型 math 数组计算 char 字符验证
+  captchaType: math
+
+# 数据源配置
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.152:3307/tony-flowable?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+    username: root
+    password: e8KwvzbVEeYXI2Eye^UiSPZy
+  redis:
+    # 地址
+    host: 192.168.1.152
+    # 端口，默认为6379
+    port: 7007
+    # 数据库索引
+    database: 9
+    # 密码
+    password: e8KwvzbVEeYXI2Eye^UiSPZy
+    # 连接超时时间
+    timeout: 10s
+# MyBatis配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: com.quinlan.**.domain
+
+
+
